@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1jG-W2-eBp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapsAndLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEu-ik-6m3">
+                                <rect key="frame" x="-4" y="64" width="308" height="536"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCF-YW-SeM">
+                                <rect key="frame" x="20" y="462" width="53" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="1QY-kv-Msr"/>
+                                    <constraint firstAttribute="height" constant="30" id="UY6-Bh-VLB"/>
+                                </constraints>
+                                <state key="normal" title="Zoom"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-7F-zuf">
+                                <rect key="frame" x="81" y="462" width="53" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="DdK-k2-W8H"/>
+                                    <constraint firstAttribute="height" constant="30" id="ebR-AF-meT"/>
+                                </constraints>
+                                <state key="normal" title="Type"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HEu-ik-6m3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0CL-yJ-fVb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HEu-ik-6m3" secondAttribute="trailing" constant="-20" id="26p-Bs-2pv"/>
+                            <constraint firstItem="HEu-ik-6m3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6BN-Mx-dan"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BCF-YW-SeM" secondAttribute="bottom" constant="8" id="8ds-xG-XE8"/>
+                            <constraint firstItem="HEu-ik-6m3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FRQ-x3-2C6"/>
+                            <constraint firstItem="HEu-ik-6m3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Twq-Js-VIg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bF5-7F-zuf" secondAttribute="bottom" constant="8" id="ZB8-t4-iQ3"/>
+                            <constraint firstItem="BCF-YW-SeM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jTr-Vb-DVg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HEu-ik-6m3" secondAttribute="bottom" id="y9j-qP-4sA"/>
+                            <constraint firstItem="bF5-7F-zuf" firstAttribute="leading" secondItem="BCF-YW-SeM" secondAttribute="trailing" constant="8" id="yam-cE-MUx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FRQ-x3-2C6"/>
+                                <exclude reference="Twq-Js-VIg"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="SJD-nB-lBV"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="500"/>
+                    <connections>
+                        <outlet property="mapView" destination="HEu-ik-6m3" id="sL8-bf-727"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4g5-Tm-Dnr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jG-W2-eBp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fOX-Em-bLo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LVa-cj-PDR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klA-RL-GZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="348"/>
         </scene>
     </scenes>
 </document>

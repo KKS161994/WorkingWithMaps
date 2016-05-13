@@ -15,6 +15,10 @@
 		92A2B58D1CE6864D002061D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A2B58B1CE6864D002061D4 /* LaunchScreen.storyboard */; };
 		92A2B5981CE6864D002061D4 /* MapsAndLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5971CE6864D002061D4 /* MapsAndLocationsTests.swift */; };
 		92A2B5A31CE6864D002061D4 /* MapsAndLocationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5A21CE6864D002061D4 /* MapsAndLocationsUITests.swift */; };
+		92A2B5B11CE6887C002061D4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A2B5B01CE6887C002061D4 /* MapKit.framework */; };
+		92A2B5B31CE68C0A002061D4 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 92A2B5B21CE68C0A002061D4 /* PublicArt.json */; };
+		92A2B5B51CE68C59002061D4 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5B41CE68C59002061D4 /* Artwork.swift */; };
+		92A2B5B71CE68DAB002061D4 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5B61CE68DAB002061D4 /* VCMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		92A2B59E1CE6864D002061D4 /* MapsAndLocationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapsAndLocationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A2B5A21CE6864D002061D4 /* MapsAndLocationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAndLocationsUITests.swift; sourceTree = "<group>"; };
 		92A2B5A41CE6864D002061D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A2B5B01CE6887C002061D4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		92A2B5B21CE68C0A002061D4 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
+		92A2B5B41CE68C59002061D4 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		92A2B5B61CE68DAB002061D4 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A2B5B11CE6887C002061D4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +88,7 @@
 		92A2B5731CE6864D002061D4 = {
 			isa = PBXGroup;
 			children = (
+				92A2B5B01CE6887C002061D4 /* MapKit.framework */,
 				92A2B57E1CE6864D002061D4 /* MapsAndLocations */,
 				92A2B5961CE6864D002061D4 /* MapsAndLocationsTests */,
 				92A2B5A11CE6864D002061D4 /* MapsAndLocationsUITests */,
@@ -100,12 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				92A2B57F1CE6864D002061D4 /* AppDelegate.swift */,
+				92A2B5B21CE68C0A002061D4 /* PublicArt.json */,
 				92A2B5811CE6864D002061D4 /* ViewController.swift */,
 				92A2B5831CE6864D002061D4 /* Main.storyboard */,
 				92A2B5891CE6864D002061D4 /* Assets.xcassets */,
 				92A2B58B1CE6864D002061D4 /* LaunchScreen.storyboard */,
 				92A2B58E1CE6864D002061D4 /* Info.plist */,
 				92A2B5861CE6864D002061D4 /* MapsAndLocations.xcdatamodeld */,
+				92A2B5B41CE68C59002061D4 /* Artwork.swift */,
+				92A2B5B61CE68DAB002061D4 /* VCMapView.swift */,
 			);
 			path = MapsAndLocations;
 			sourceTree = "<group>";
@@ -232,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A2B5B31CE68C0A002061D4 /* PublicArt.json in Resources */,
 				92A2B58D1CE6864D002061D4 /* LaunchScreen.storyboard in Resources */,
 				92A2B58A1CE6864D002061D4 /* Assets.xcassets in Resources */,
 				92A2B5851CE6864D002061D4 /* Main.storyboard in Resources */,
@@ -261,6 +275,8 @@
 			files = (
 				92A2B5821CE6864D002061D4 /* ViewController.swift in Sources */,
 				92A2B5801CE6864D002061D4 /* AppDelegate.swift in Sources */,
+				92A2B5B71CE68DAB002061D4 /* VCMapView.swift in Sources */,
+				92A2B5B51CE68C59002061D4 /* Artwork.swift in Sources */,
 				92A2B5881CE6864D002061D4 /* MapsAndLocations.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
