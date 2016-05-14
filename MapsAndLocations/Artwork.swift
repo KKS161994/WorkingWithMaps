@@ -35,8 +35,8 @@ class Artwork: NSObject, MKAnnotation{
         let latitude = (json[18].string! as NSString).doubleValue
         let longitude = (json[19].string! as NSString).doubleValue
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        return Artwork(title: title, locationName: locationName!, discipline: discipline!, coordinate: coordinate!)
+    
+        return Artwork(title: title, locationName: locationName!, discipline: discipline!, coordinate: coordinate)
     }
     var subtitle: String?{
     return locationName
@@ -47,6 +47,17 @@ class Artwork: NSObject, MKAnnotation{
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = title
         return mapItem
+    }
+    func pinColor ()-> MKPinAnnotationColor {
+        switch discipline {
+        case "Sculpture" , "Plaque":
+            return .Red
+            case "Mural" , "Monument":
+            return .Purple
+            
+        default:
+            return .Green
+        }
     }
     
 }
