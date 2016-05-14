@@ -11,6 +11,7 @@ import MapKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    var artworks = [Artwork]()
     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
     let regionRadius: CLLocationDistance = 1000
     override func viewDidLoad() {
@@ -25,6 +26,23 @@ class ViewController: UIViewController {
         centeronMapLocation(initialLocation)
         mapView.addAnnotation(artwork)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    func loadInitialData(){
+    let fileName = NSBundle.mainBundle().pathForResource("PublicArt", ofType: "json")
+        var readError: NSError?
+        var data: NSData = NSData(contentsOfFile: fileName!, options: NSDataReadingOptions(0),error: &readError)!
+        var error: NSError?
+        let jsonObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error)
+        if let jsonObject = jsonObject as [String: AnyObject] where error == nill{
+            let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array{
+                for artworkJson in jsonData {
+                if let artworkJson = artworkJson.array,
+                    artwork = Artwork.fromJSON(artworkJson){
+                    artworks.append(artwork)
+                    }
+                }
+            }
+        }
     }
     func centeronMapLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)

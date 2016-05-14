@@ -19,6 +19,7 @@
 		92A2B5B31CE68C0A002061D4 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 92A2B5B21CE68C0A002061D4 /* PublicArt.json */; };
 		92A2B5B51CE68C59002061D4 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5B41CE68C59002061D4 /* Artwork.swift */; };
 		92A2B5B71CE68DAB002061D4 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5B61CE68DAB002061D4 /* VCMapView.swift */; };
+		92A2B5B91CE69D0C002061D4 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B5B81CE69D0C002061D4 /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		92A2B5B21CE68C0A002061D4 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
 		92A2B5B41CE68C59002061D4 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		92A2B5B61CE68DAB002061D4 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		92A2B5B81CE69D0C002061D4 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				92A2B5B21CE68C0A002061D4 /* PublicArt.json */,
 				92A2B5811CE6864D002061D4 /* ViewController.swift */,
 				92A2B5831CE6864D002061D4 /* Main.storyboard */,
+				92A2B5B81CE69D0C002061D4 /* JSON.swift */,
 				92A2B5891CE6864D002061D4 /* Assets.xcassets */,
 				92A2B58B1CE6864D002061D4 /* LaunchScreen.storyboard */,
 				92A2B58E1CE6864D002061D4 /* Info.plist */,
@@ -276,6 +279,7 @@
 				92A2B5821CE6864D002061D4 /* ViewController.swift in Sources */,
 				92A2B5801CE6864D002061D4 /* AppDelegate.swift in Sources */,
 				92A2B5B71CE68DAB002061D4 /* VCMapView.swift in Sources */,
+				92A2B5B91CE69D0C002061D4 /* JSON.swift in Sources */,
 				92A2B5B51CE68C59002061D4 /* Artwork.swift in Sources */,
 				92A2B5881CE6864D002061D4 /* MapsAndLocations.xcdatamodeld in Sources */,
 			);
